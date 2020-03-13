@@ -7,6 +7,10 @@
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/psycopg2-tutorial.svg?style=flat-square8&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/psycopg2-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/network)
 
+![Psycopg2-Tutorial](https://github.com/hackersandslackers/psycopg2-tutorial/blob/master/.github/psycopg2@2x.jpg?raw=true)
+
+Source code for the accompanying tutorial found here: https://hackersandslackers.com/psycopg2-postgres-python/
+
 Executes various SQL queries for blog maintenance. Looks in the **/queries** folder for SQL queries and executes all of them against a Postgres database.
 
 ## Getting Started
