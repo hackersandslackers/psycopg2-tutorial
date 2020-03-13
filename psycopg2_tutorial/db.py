@@ -14,7 +14,7 @@ class Database:
         self.dbname = config.DATABASE_NAME
         self.conn = None
 
-    def open_connection(self):
+    def connect(self):
         """Connect to a Postgres database."""
         if self.conn is None:
             try:
@@ -31,7 +31,7 @@ class Database:
 
     def select_rows(self, query):
         """Run a SQL query to select rows from table."""
-        self.open_connection()
+        self.connect()
         with self.conn.cursor() as cur:
             cur.execute(query)
             records = [row for row in cur.fetchall()]
@@ -40,7 +40,7 @@ class Database:
 
     def update_rows(self, query):
         """Run a SQL query to update rows in table."""
-        self.open_connection()
+        self.connect()
         with self.conn.cursor() as cur:
             cur.execute(query)
             self.conn.commit()

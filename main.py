@@ -1,5 +1,5 @@
 """Script entry point."""
-from psycopg2_tutorial import run_script
+from psycopg2_tutorial import init_script
 
 if __name__ == "__main__":
-    run_script()
+    init_script()
