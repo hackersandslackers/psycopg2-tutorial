@@ -1,6 +1,7 @@
 import sys
 from loguru import logger
 import psycopg2
+from psycopg2.extras import DictCursor
 
 
 class Database:
@@ -35,8 +36,17 @@ class Database:
         with self.conn.cursor() as cur:
             cur.execute(query)
             records = [row for row in cur.fetchall()]
-            cur.close()
-            return records
+        cur.close()
+        return records
+
+    def select_rows_dict_cursor(self, query):
+        """Run a SQL query to select rows from table and return dictionaries."""
+        self.connect()
+        with self.conn.cursor(cursor_factory=DictCursor) as cur:
+            cur.execute(query)
+            records = cur.fetchall()
+        cur.close()
+        return records
 
     def update_rows(self, query):
         """Run a SQL query to update rows in table."""
