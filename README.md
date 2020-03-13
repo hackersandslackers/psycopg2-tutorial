@@ -11,7 +11,8 @@
 
 Source code for the accompanying tutorial found here: https://hackersandslackers.com/psycopg2-postgres-python/
 
-Executes various SQL queries for blog maintenance. Looks in the **/queries** folder for SQL queries and executes all of them against a Postgres database.
+Connect to a PostgreSQL database and execute queries in Python using the Psycopg2 library using this tutorial. This script looks for **.sql** files stored in the **/queries** directory, and executes them against a Postgres database.
+
 
 ## Getting Started
 
@@ -23,6 +24,15 @@ $ cd psycopg2-tutorial
 $ pipenv shell
 $ pipenv update
 $ python main.py
+```
+
+Alternatively, try installing via **setup.py**:
+
+```shell
+$ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
+$ cd psycopg2-tutorial
+$ python3 setup.py install
+$ python3 main.py
 ```
 
 -----
