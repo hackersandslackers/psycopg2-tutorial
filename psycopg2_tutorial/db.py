@@ -1,6 +1,9 @@
 import sys
-import logging
+import pprint
+from loguru import logger
 import psycopg2
+
+pp = pprint.PrettyPrinter(indent=1)
 
 
 class Database:
@@ -16,22 +19,22 @@ class Database:
 
     def open_connection(self):
         """Connect to a Postgres database."""
-        try:
-            self.conn = psycopg2.connect(host=self.host,
-                                         user=self.username,
-                                         password=self.password,
-                                         port=self.port,
-                                         dbname=self.dbname)
-        except psycopg2.DatabaseError as e:
-            logging.error(e)
-            sys.exit()
-        finally:
-            logging.info('Connection opened successfully.')
+        if self.conn is None:
+            try:
+                self.conn = psycopg2.connect(host=self.host,
+                                             user=self.username,
+                                             password=self.password,
+                                             port=self.port,
+                                             dbname=self.dbname)
+            except psycopg2.DatabaseError as e:
+                logger.error(e)
+                sys.exit()
+            finally:
+                logger.info('Connection opened successfully.')
 
     def select_rows(self, query):
         """Run a SQL query to select rows from table."""
-        if self.conn is None:
-            self.open_connection()
+        self.open_connection()
         with self.conn.cursor() as cur:
             records = []
             cur.execute(query)
@@ -39,12 +42,12 @@ class Database:
             for row in result:
                 records.append(row)
             cur.close()
+            pp.pprint(records)
             return records
 
     def update_rows(self, query):
         """Run a SQL query to update rows in table."""
-        if self.conn is None:
-            self.open_connection()
+        self.open_connection()
         with self.conn.cursor() as cur:
             cur.execute(query)
             self.conn.commit()

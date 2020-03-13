@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 psycopg2-binary = "*"
 python-dotenv = "*"
+loguru = "*"
 
 [dev-packages]
 pytest = "*"

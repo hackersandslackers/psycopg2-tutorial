@@ -11,7 +11,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='Psycopg2 Tutorial',
-    version='0.0.1',
+    version='0.1.0',
     description='Connect to a PostgreSQL database and execute queries in \
                  Python using the Psycopg2 library using this tutorial. This \
                  script looks for **.sql** files stored in the **/queries** \
@@ -28,7 +28,8 @@ setup(
     keywords='Postgres PostgreSQL Psycopg2 Database Python',
     packages=find_packages(),
     install_requires=['psycopg2-binary',
-                      'python-dotenv'],
+                      'python-dotenv',
+                      'loguru'],
     extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
