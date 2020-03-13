@@ -8,3 +8,19 @@
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/psycopg2-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/network)
 
 Executes various SQL queries for blog maintenance. Looks in the **/queries** folder for SQL queries and executes all of them against a Postgres database.
+
+## Getting Started
+
+Installation is recommended with Pipenv:
+
+```shell
+$ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
+$ cd psycopg2-tutorial
+$ pipenv shell
+$ pipenv update
+$ python main.py
+```
+
+-----
+
+**Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.
