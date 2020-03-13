@@ -1,9 +1,6 @@
 import sys
-import pprint
 from loguru import logger
 import psycopg2
-
-pp = pprint.PrettyPrinter(indent=1)
 
 
 class Database:
@@ -36,13 +33,9 @@ class Database:
         """Run a SQL query to select rows from table."""
         self.open_connection()
         with self.conn.cursor() as cur:
-            records = []
             cur.execute(query)
-            result = cur.fetchall()
-            for row in result:
-                records.append(row)
+            records = [row for row in cur.fetchall()]
             cur.close()
-            pp.pprint(records)
             return records
 
     def update_rows(self, query):
