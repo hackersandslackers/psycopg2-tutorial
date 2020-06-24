@@ -1,6 +1,7 @@
 """Read .sql files from a local folder."""
 from os import listdir
 from os.path import isfile, join
+from config import SQL_QUERIES_FOLDER
 
 
 def get_sql_files(folder):
@@ -12,10 +13,13 @@ def get_sql_files(folder):
 def read_sql_from_files(folder):
     """Read SQL query from .sql file."""
     files = get_sql_files(folder)
-    queries = []
+    sql_queries = []
     for file in files:
-        fd = open(file, 'r')
-        query = fd.read()
-        queries.append(query)
-        fd.close()
-    return queries
+        sql_file = open(file, 'r')
+        query = sql_file.read()
+        sql_queries.append(query)
+        sql_file.close()
+    return sql_queries
+
+
+queries = read_sql_from_files(SQL_QUERIES_FOLDER)

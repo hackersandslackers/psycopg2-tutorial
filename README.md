@@ -16,22 +16,24 @@ Connect to a PostgreSQL database and execute queries in Python using the Psycopg
 
 ## Getting Started
 
-Installation is recommended with Pipenv:
+**Installation via `requirements.txt`**:
+
+```shell
+$ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
+$ cd psycopg2-tutorial
+$ python3 -m venv myenv
+$ source myenv/bin/activate
+$ pip3 install -r requirements.txt
+$ python3 main.py
+```
+
+**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
 $ cd psycopg2-tutorial
 $ pipenv shell
 $ pipenv update
-$ python main.py
-```
-
-Alternatively, try installing via **setup.py**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
-$ cd psycopg2-tutorial
-$ python3 setup.py install
 $ python3 main.py
 ```
 
