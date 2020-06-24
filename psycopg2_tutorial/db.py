@@ -49,7 +49,7 @@ class Database:
         return records
 
     def select_rows_dict_cursor(self, query):
-        """Run a SQL query to select rows from table and return dictionaries."""
+        """Run SELECT query and return dictionaries."""
         self.connect()
         with self.conn.cursor(cursor_factory=DictCursor) as cur:
             cur.execute(query)
