@@ -47,6 +47,18 @@ $ poetry update
 $ poetry run
 ```
 
+## Usage
+
+Replace the values in **.env.example** with your values and rename this file to **.env**:
+
+* `DATABASE_USERNAME`: The username used to connect to your Postgres database.
+* `DATABASE_PASSWORD`: Password for the above user.
+* `DATABASE_HOST`: The hostname of your database (ie: localhost).
+* `DATABASE_NAME`: The name of your "database" (the database inside your database - why isn't there a better term for this?).
+* `DATABASE_PORT`: Port of your Postgres database (default is 5432).
+
+*Remember never to commit secrets saved in .env files to Github.*
+
 -----
 
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffee, and all coffee goes towards more content.
