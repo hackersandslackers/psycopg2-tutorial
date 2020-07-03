@@ -4,7 +4,7 @@
 ![Psycopg2-Binary](https://img.shields.io/badge/Psycopg2--binary-v2.8.4-blue.svg?longCache=true&logo=postgresql&longCache=true&style=flat-square&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
 [![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/psycopg2-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/psycopg2-tutorial.svg?style=flat-square8&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/psycopg2-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/psycopg2-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b&logo=Github)](https://github.com/hackersandslackers/psycopg2-tutorial/network)
 
 ![Psycopg2-Tutorial](https://github.com/hackersandslackers/psycopg2-tutorial/blob/master/.github/psycopg2@2x.jpg?raw=true)
@@ -35,6 +35,16 @@ $ cd psycopg2-tutorial
 $ pipenv shell
 $ pipenv update
 $ python3 main.py
+```
+
+**Installation via [Poetry](https://python-poetry.org/)**:
+
+```shell
+$ git clone https://github.com/hackersandslackers/psycopg2-tutorial.git
+$ cd psycopg2-tutorial
+$ poetry shell
+$ poetry update
+$ poetry run
 ```
 
 -----
