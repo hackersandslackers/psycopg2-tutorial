@@ -9,4 +9,4 @@ pyparsing==2.4.7
 pytest==6.0.1
 python-dotenv==0.14.0
 six==1.15.0
-wcwidth==0.2.5
+wcwidth==0.8.3
